@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sagmal_mobil/hosgeldin_widget.dart';
+import 'package:sagmal_mobil/welcome_widget.dart';
 
-class ProfileContent extends StatelessWidget {
-  const ProfileContent({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,10 @@ class ProfileContent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HosgeldinWidget(),
+            WelcomeWidget(),
             CircleAvatar(
               radius: 50.w,
-              backgroundImage: const AssetImage('assets/images/sagmalmobilonlyicon.png'),
+              backgroundImage: const AssetImage('assets/images/sagmal_mobil_only_icon.png'),
             ),
             SizedBox(height: 20.h),
             Text(

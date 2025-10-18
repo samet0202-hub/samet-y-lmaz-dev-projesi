@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HosgeldinWidget extends StatelessWidget {
-  const HosgeldinWidget({
+class WelcomeWidget extends StatelessWidget {
+  const WelcomeWidget({
     super.key,
   });
 
@@ -18,9 +18,9 @@ class HosgeldinWidget extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              'assets/images/sagmalmobilonlyicon.png',
-              height: 60.h,
-              width: 60.w,
+              'assets/images/sagmal_mobil_only_icon.png',
+              height: 12.h,
+              width: 12.w,
             ),
             SizedBox(width: 16.w),
             Expanded(
