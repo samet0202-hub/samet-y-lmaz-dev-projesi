@@ -4,7 +4,7 @@ class HomeConstants {
   String summaryCard1Title ='Bugün Sağılan Süt (LT)';
   int summaryCard1Value =245;
   String summaryCard1AccentText ='+Ekle';
-
+//
   String summaryCard2Title ='Toplam Alacak (₺)';
   int summaryCard2value =8450;
   int summaryCard2AccentValue =12;
