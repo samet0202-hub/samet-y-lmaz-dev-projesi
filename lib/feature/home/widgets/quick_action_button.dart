@@ -8,9 +8,10 @@ class QuickActionButton extends StatelessWidget {
   final Color backgroundColor;
   final Color iconColor;
   final BuildContext context;
-  final VoidCallback onPressed; 
+  final VoidCallback onPressed;
 
   const QuickActionButton({
+    super.key,
     required this.label,
     required this.icon,
     required this.backgroundColor,
@@ -24,8 +25,7 @@ class QuickActionButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        
-        width: (MediaQuery.of(context).size.width - 64.w) / 3, 
+        width: (MediaQuery.of(context).size.width - 64.w) / 3,
         padding: const EdgeInsets.symmetric(vertical: 16.0),
         decoration: BoxDecoration(
           color: backgroundColor,
@@ -38,7 +38,11 @@ class QuickActionButton extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               label,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: textPrimary),
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: textPrimary,
+              ),
               textAlign: TextAlign.center,
             ),
           ],

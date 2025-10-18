@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sagmal_mobil/feature/home/widgets/summary_card.dart';
 
-
-
-
 class TransactionTile extends StatelessWidget {
   final String title;
   final String subtitle;
@@ -13,6 +10,7 @@ class TransactionTile extends StatelessWidget {
   final Color iconColor;
 
   const TransactionTile({
+    super.key,
     required this.title,
     required this.subtitle,
     required this.amount,
@@ -20,14 +18,17 @@ class TransactionTile extends StatelessWidget {
     required this.icon,
     required this.iconColor,
   });
-  
-  @override 
+
+  @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 4.0,
+      ),
       leading: CircleAvatar(
         radius: 20,
-        backgroundColor: iconColor.withOpacity(0.1),
+        backgroundColor: iconColor.withValues(alpha: 0.1),
         child: Icon(icon, color: iconColor, size: 20),
       ),
       title: Text(
