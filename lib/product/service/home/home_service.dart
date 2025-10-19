@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:sagmal_mobil/product/models/weather_model.dart';
+import 'package:sagmal_mobil/product/models/weather/weather_main_model.dart';
 
-Future<WeatherModel>? havaDurumu;
+Future<WeatherMainModel>? havaDurumu;
 final dio = Dio(
   BaseOptions(
     baseUrl: 'https://api.openweathermap.org/data/2.5/',
@@ -13,9 +13,9 @@ final dio = Dio(
     },
   ),
 );
-Future<WeatherModel> getWeather(String sehir) async {
+Future<WeatherMainModel> getWeather(String sehir) async {
   final response = await dio.get('weather', queryParameters: {'q': sehir});
-  var model = weatherModelFromJson(response.toString());
+  var model = weatherMainModelFromJson(response.toString());
   debugPrint(model.main?.temp.toString());
   return model;
 }

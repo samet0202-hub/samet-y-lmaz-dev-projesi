@@ -6,7 +6,7 @@ import 'package:sagmal_mobil/feature/home/widgets/summary_scree.dart';
 import 'package:sagmal_mobil/feature/home/widgets/transaction_tile.dart';
 import 'package:sagmal_mobil/product/constant/project_constant.dart';
 import 'package:sagmal_mobil/product/loops/weather_icon_chooser.dart';
-import 'package:sagmal_mobil/product/models/weather_model.dart';
+import 'package:sagmal_mobil/product/models/weather/weather_main_model.dart';
 import 'package:sagmal_mobil/product/service/home/home_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -92,7 +92,7 @@ Widget buildRecentTransactions() {
   );
 }
 
-Widget buildWeatherCard(WeatherModel havaDurumu, BuildContext context) {
+Widget buildWeatherCard(WeatherMainModel havaDurumu, BuildContext context) {
   return Card(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
     color: const Color.fromRGBO(35, 107, 157, 1),
