@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sagmal_mobil/main.dart';
+import 'package:sagmal_mobil/feature/main/page/main_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
