@@ -1,38 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sagmal_mobil/welcome_widget.dart';
+import 'package:sagmal_mobil/feature/profile/widgets/animal_inventory.dart';
+import 'package:sagmal_mobil/feature/profile/widgets/milk_price.dart';
+import 'package:sagmal_mobil/feature/profile/widgets/payment_information.dart';
+import 'package:sagmal_mobil/feature/profile/widgets/user_details.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(16.0.w),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            WelcomeWidget(),
-            CircleAvatar(
-              radius: 50.w,
-              backgroundImage: const AssetImage('assets/images/sagmal_mobil_only_icon.png'),
-            ),
-            SizedBox(height: 20.h),
+            UserDetails(),
+            20.verticalSpace,
             Text(
-              'Kullanıcı Adı: Samet',
-              style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.bold),
+              ProjectConstants.bussinessAndInventoryTitle,
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+              textAlign: TextAlign.left,
             ),
-            SizedBox(height: 10.h),
-            Text(
-              'E-posta: samet@example.com',
-              style: TextStyle(fontSize: 18.sp),
-            ),
-            SizedBox(height: 30.h),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.edit, size: 20.sp),
-              label: Text('Profili Düzenle', style: TextStyle(fontSize: 18.sp)),
+            10.verticalSpace,
+
+            Column(
+              children: [
+                AnimalInventory(),
+                20.verticalSpace,
+                MilkPrice(),
+                20.verticalSpace,
+                PaymentInformation(),
+              ],
             ),
           ],
         ),

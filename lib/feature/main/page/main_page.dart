@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
 import 'package:sagmal_mobil/feature/home/page/home_page.dart';
+import 'package:sagmal_mobil/feature/milk_records/page/milk_records_page.dart';
 import 'package:sagmal_mobil/feature/profile/page/profil_page.dart';
-import 'package:sagmal_mobil/feature/settings/page/settings_page.dart';
+import 'package:sagmal_mobil/feature/payments/page/payments_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -12,12 +14,15 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   final List<Widget> _pages = [
+   
+    const PaymentsPage(),
+    const MilkRecordsPage(),
     const HomePage(),
-    const ProfilePage(),
-    const SettingsPage(),
+    const FinancialTrackingPage(),
+    const ProfilePage()
   ];
 
   @override
@@ -33,30 +38,30 @@ class _MainPageState extends State<MainPage> {
           });
         },
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, size: 28.sp),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person, size: 28.sp),
-            label: 'Profil',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings, size: 28.sp),
-            label: 'Ayarlar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.opacity_outlined, size: 28.sp),
-            label: 'Süt kayıtları',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.pets_outlined, size: 28.sp),
-            label: 'Hayvan Takip',
-          ),
+         
+         
           BottomNavigationBarItem(
             icon: Icon(Icons.payments_outlined, size: 28.sp),
             label: 'Alacaklar',
           ),
+          
+          BottomNavigationBarItem(
+            icon: Icon(Icons.opacity_outlined, size: 28.sp),
+            label: 'Süt kayıtları',
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.home, size: 28.sp),
+            label: 'Ana Sayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.receipt_long, size: 28.sp),
+            label: 'Finansal Takip',
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.person, size: 28.sp),
+            label: 'Profil',
+          ),
+          
         ],
       ),
 

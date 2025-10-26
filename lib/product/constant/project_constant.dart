@@ -1,4 +1,16 @@
+import 'dart:ui';
+
 class ProjectConstants {
+
+static const Color primaryBlue = Color(0xFF1E88E5);
+static const Color darkBlue = Color(0xFF1565C0);
+static const Color textPrimary = Color(0xFF212121);
+static const Color textSecondary = Color(0xFF757575);
+static const Color lightGrey = Color(0xFFF5F5F5);
+static const Color colorGreen = Color(0xFF4CAF50);
+static const Color colorPurple = Color(0xFF9C27B0);
+static const Color colorOrange = Color(0xFFFF9800);
+
   static String summaryCard1Title = 'Bugün Sağılan Süt (LT)';
   static int summaryCard1Value = 245;
   static String summaryCard1AccentText = '+Ekle';
@@ -47,4 +59,15 @@ class ProjectConstants {
   static String get transactionTile3Subtitle => "2 gün önce $twoDaysAgo";
   static int transactionTile3Amount = 750;
   static String get transactionTile3AmountText => "- $transactionTile3Amount ₺";
+
+  static String bussinessAndInventoryTitle = "İşletme ve Envanter yönetimi";
+  static String upgradeInventoryButtonTitle = "Envanteri Güncelle";
+  static String animalInventoryTitle = "Hayvan Envanteri";
+  static String totalCattleLabel = "Toplam Büyükbaş";
+  static int totalCattleValue = 28;
+  static String totalMilkCowsLabel = "Toplam Süt İnekleri";
+  static int totalMilkCowsValue = 15;
+
+  static String monthlyExpenseDistributionTitle = "Aylık Gider Dağılımı";
+  static String allTransactionsButtonTitle = "TÜM İŞLEMLERİ GÖR >";
 }
