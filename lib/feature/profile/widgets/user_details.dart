@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/main.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 
 class UserDetails extends StatelessWidget {
@@ -31,7 +32,7 @@ class UserDetails extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "KULLANICI ADI",
+                      ProjectConstants.userDetailsTitle,
                       style: TextStyle(
                         fontSize: 20.sp,
                         fontWeight: FontWeight.bold,
@@ -49,7 +50,7 @@ class UserDetails extends StatelessWidget {
                     height: 30.h,
                     child: Center(
                       child: Text(
-                        "Süt Üreticisi(çiftçi)",
+                        ProjectConstants.jobTitle,
                         style: TextStyle(
                           fontSize: 16.sp,
                           color: primaryBlue,
@@ -66,40 +67,40 @@ class UserDetails extends StatelessWidget {
         ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(
-            "E-posta Adresi",
+            ProjectConstants.emailLabel,
             style: TextStyle(
               fontSize: 16.sp,
               fontWeight: FontWeight.bold,
               
             ),
           ),
-          subtitle: Text("user12345@gmail.com"),
+          subtitle: Text(ProjectConstants.emailValue),
           leading: Icon(Icons.email, color: primaryBlue, size: 30.sp),
         ),
         ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(
-            "Telefon Numarası",
+            ProjectConstants.phoneLabel,
             style: TextStyle(
               fontSize: 16.sp,
               fontWeight: FontWeight.bold,
               
             ),
           ),
-          subtitle: Text("+90 555 555 55 55"),
+          subtitle: Text(ProjectConstants.phoneValue),
           leading: Icon(Icons.phone, color: primaryBlue, size: 30.sp),
         ),
         ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(
-            "Adres",
+            ProjectConstants.addressLabel,
             style: TextStyle(
               fontSize: 16.sp,
               fontWeight: FontWeight.bold,
               
             ),
           ),
-          subtitle: Text("Narince köyü ,Adıyaman ,Türkiye"),
+          subtitle: Text(ProjectConstants.addressValue),
           leading: Icon(Icons.location_on, color: primaryBlue, size: 30.sp),
         ),
       ],

@@ -12,12 +12,14 @@ Widget buildWeatherCard(WeatherMainModel havaDurumu, BuildContext context) {
       padding: EdgeInsets.all(16),
       child: Row(
         children: [
-          Icon(
-            weatherIconChooser(havaDurumu.weather![0].icon!),
-            size: 64.sp,
-            color: Colors.white,
+          Expanded(
+            child: Icon(
+              weatherIconChooser(havaDurumu.weather![0].icon!),
+              size: 64.sp,
+              color: Colors.white,
+            ),
           ),
-          SizedBox(width: 40.w),
+          SizedBox(width: 30.w),
           Column(
             children: [
               Text(

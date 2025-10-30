@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/widgets/summary_card.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildSummarySection(BuildContext context) {
     return Column(
@@ -11,11 +12,11 @@ Widget buildSummarySection(BuildContext context) {
           child: Column(
             children: [
               Text(
-                'Net Kâr',
+                ProjectConstants.ftpSummarySectionTitle,
                 style: TextStyle(fontSize: 16.sp, color: textSecondary.withValues(alpha:  0.8)),
               ),
               Text(
-                '₺ 4.550,00',
+                ProjectConstants.summaryCard3Value.toString(),
                 style: TextStyle(
                   fontSize: 36.sp,
                   fontWeight: FontWeight.w900,
@@ -29,7 +30,7 @@ Widget buildSummarySection(BuildContext context) {
                   borderRadius: BorderRadius.circular(15.r),
                 ),
                 child: Text(
-                  'Önceki Aya Göre +%15',
+                  ProjectConstants.ftpSummarySectionSubtitleText,
                   style: TextStyle(fontSize: 13.sp, color: colorGreen, fontWeight: FontWeight.bold),
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/home/widgets/summary_card.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 class MilkPrice extends StatelessWidget {
   const MilkPrice({
@@ -17,7 +18,7 @@ class MilkPrice extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Süt Fiyatı",
+                ProjectConstants.milkPriceTitle,
                 style: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.bold,
@@ -37,12 +38,12 @@ class MilkPrice extends StatelessWidget {
               Row(
                 children: <Widget>[
                   10.horizontalSpace,
-                  Text("₺", style: TextStyle(fontSize: 20.sp)),
+                  Text(ProjectConstants.milkPriceUnit, style: TextStyle(fontSize: 20.sp)),
                   const SizedBox(width: 8.0),
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Güncel Süt Fiyatını Giriniz",
+                        hintText: ProjectConstants.enterCurrentMilkPriceHintText,
                         border: OutlineInputBorder(),
                       ),
                     ),

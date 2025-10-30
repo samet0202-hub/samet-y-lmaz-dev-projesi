@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildLast7DayDatas() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Son 7 Günlük Veriler',
+          ProjectConstants.lastSevenDaysDataTitle,
           style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold, color: textPrimary),
         ),
         SizedBox(height: 12.h),

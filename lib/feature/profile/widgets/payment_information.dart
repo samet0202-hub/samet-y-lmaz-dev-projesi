@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/home/widgets/summary_card.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 class PaymentInformation extends StatelessWidget {
   const PaymentInformation({
@@ -18,7 +19,7 @@ class PaymentInformation extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Ödeme Bilgileri",
+                  ProjectConstants.paymentInformationTitle,
                   style: TextStyle(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
@@ -33,7 +34,7 @@ class PaymentInformation extends StatelessWidget {
                 
           TextField(
             decoration: InputDecoration(
-              labelText: "TR00 0000 0000 0000 0000 0000 00",
+              labelText: ProjectConstants.bankAccountPlaceholder,
               border: OutlineInputBorder(),
             ),
           ),
@@ -44,7 +45,7 @@ class PaymentInformation extends StatelessWidget {
               backgroundColor: primaryBlue,
               fixedSize: Size(300.w, 40.h),
             ),
-            child: Text("Güncelle",
+            child: Text(ProjectConstants.updateButtonText,
                 style: TextStyle(
                   fontSize: 14.sp,
                   color: Colors.white,

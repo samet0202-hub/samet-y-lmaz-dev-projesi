@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sagmal_mobil/feature/payments/page/payments_page.dart';
 import 'package:sagmal_mobil/feature/payments/widgets/mini_status_card.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildHeaderCards(BuildContext context) {
     return Container(
@@ -11,9 +12,9 @@ Widget buildHeaderCards(BuildContext context) {
       child: Column(
         children: [
          
-          const Text('Toplam Alacak', style: TextStyle(color: Colors.white70, fontSize: 16)),
-          const Text(
-            '₺ 18,750.00',
+          Text(ProjectConstants.totalDebtText, style: TextStyle(color: Colors.white70, fontSize: 16)),
+          Text(
+            ProjectConstants.totalDebtValueText,
             style: TextStyle(
               color: Colors.white,
               fontSize: 32,
@@ -25,14 +26,14 @@ Widget buildHeaderCards(BuildContext context) {
           Row(
             children: [
               Expanded(child: MiniStatusCard(
-                title: 'Vadesi Yakın',
-                value: '₺ 3,200',
+                title: ProjectConstants.customFilterChipsDueSoon,
+                value: ProjectConstants.dueSoonValueText,
                 color: lightBlue,
               )),
               const SizedBox(width: 12),
               Expanded(child: MiniStatusCard(
-                title: 'Vadesi Geçen',
-                value: '₺ 1,850',
+                title: ProjectConstants.customFilterChipsOverdue,
+                value: ProjectConstants.overdueValueText,
                 color: colorRed,
               )),
             ],
@@ -54,7 +55,7 @@ Widget buildReminderButton() {
         
         },
         icon: const Icon(Icons.send_outlined, size: 20),
-        label: const Text('Hatırlatıcı Gönder', style: TextStyle(fontWeight: FontWeight.bold)),
+        label:  Text(ProjectConstants.sendReminderButtonText, style: TextStyle(fontWeight: FontWeight.bold)),
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           foregroundColor: primaryBlue,

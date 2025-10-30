@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildPastRecordsHeader() {
     return Padding(
@@ -9,7 +10,7 @@ Widget buildPastRecordsHeader() {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Geçmiş Kayıtlar',
+            ProjectConstants.pastRecordsText,
             style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold, color: textPrimary),
           ),
           IconButton(

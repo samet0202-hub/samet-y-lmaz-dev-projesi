@@ -1,5 +1,6 @@
  import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildUncategorizedWarning() {
     return Container(
@@ -15,7 +16,7 @@ Widget buildUncategorizedWarning() {
           Icon(Icons.warning_amber_outlined, color: Colors.amber.shade700, size: 20.sp),
           SizedBox(width: 8.w),
           Text(
-            'Kategorize Edilmemiş Giderler',
+            ProjectConstants.uncategorizedExpenseWarningText,
             style: TextStyle(color: Colors.amber.shade700, fontWeight: FontWeight.bold, fontSize: 14.sp),
           ),
         ],

@@ -1,17 +1,18 @@
  import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
+import 'package:sagmal_mobil/product/constant/project_constant.dart';
 
 Widget buildTodayMilkYields() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          'Bugünün Süt Verimi',
+          ProjectConstants.todayMilkYieldLabel,
           style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold, color: textPrimary),
         ),
         Text(
-          'Günlük toplanan süt miktarını girin.',
+          ProjectConstants.todayMilkYieldSubtitle,
           style: TextStyle(fontSize: 14.sp, color: textSecondary),
         ),
         SizedBox(height: 15.h),
@@ -21,9 +22,9 @@ Widget buildTodayMilkYields() {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             prefixIcon: Icon(Icons.local_drink, color: primaryBlue, size: 24.sp),
-            suffixText: 'LT',
+            suffixText: ProjectConstants.literAbbreviation,
             suffixStyle: TextStyle(fontSize: 16.sp, color: textPrimary, fontWeight: FontWeight.bold),
-            hintText: 'Günlük süt miktarını giriniz',
+            hintText: ProjectConstants.enterMilkYieldHintText,
             hintStyle: TextStyle(color: textSecondary),
             filled: true,
             fillColor: lightGrey,
@@ -43,7 +44,7 @@ Widget buildTodayMilkYields() {
           child: ElevatedButton.icon(
             onPressed: () {},
             icon: Icon(Icons.check_circle_outline, color: Colors.white, size: 24.sp),
-            label: Text('Kaydı Tamamla', style: TextStyle(fontSize: 18.sp, color: Colors.white, fontWeight: FontWeight.bold)),
+            label: Text(ProjectConstants.completeRecordButtonText, style: TextStyle(fontSize: 18.sp, color: Colors.white, fontWeight: FontWeight.bold)),
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryBlue,
               padding: EdgeInsets.symmetric(vertical: 15.h),
@@ -58,7 +59,7 @@ Widget buildTodayMilkYields() {
         TextButton.icon(
           onPressed: () {},
           icon: Icon(Icons.add, color: primaryBlue, size: 20.sp),
-          label: Text('Hayvan Bazlı Detaylı Giriş', style: TextStyle(color: primaryBlue, fontWeight: FontWeight.bold, fontSize: 14.sp)),
+          label: Text(ProjectConstants.detailedEntryButtonText, style: TextStyle(color: primaryBlue, fontWeight: FontWeight.bold, fontSize: 14.sp)),
         ),
       ],
     );
