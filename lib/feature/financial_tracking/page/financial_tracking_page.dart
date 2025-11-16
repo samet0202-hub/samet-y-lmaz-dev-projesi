@@ -6,6 +6,7 @@ import 'package:sagmal_mobil/feature/financial_tracking/widgets/build_summary_se
 import 'package:sagmal_mobil/feature/financial_tracking/widgets/build_uncategorized_warning.dart';
 
 const Color primaryBlue = Color(0xFF1E88E5);
+const Color darkBlue = Color(0xFF1565C0);
 const Color colorGreen = Color(0xFF4CAF50);
 const Color colorRed = Color(0xFFF44336);
 const Color textPrimary = Color(0xFF212121);

@@ -1,5 +1,7 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sagmal_mobil/feature/login_register/page/login_register.dart';
 import 'package:sagmal_mobil/feature/main/page/main_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MainPage()),
+        MaterialPageRoute(builder: (context) => const LoginRegisterPage()),
       );
     });
   }
@@ -36,3 +38,4 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+*/

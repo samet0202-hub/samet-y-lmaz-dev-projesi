@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/main/page/main_page.dart';
+import 'package:sagmal_mobil/router/app_router.dart';
 
 const Color primaryBlue = Color(0xFF1E88E5);
 const Color darkBlue = Color(0xFF1565C0);
@@ -27,22 +28,25 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'SAĞMAL MOBİL',
-          theme: ThemeData(
-            appBarTheme: const AppBarTheme(
-              titleTextStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-              backgroundColor: Color.fromRGBO(35, 107, 157, 1),
-            ),
+        return MaterialApp.router(
+          
+           routerConfig: router,
+        debugShowCheckedModeBanner: false,
+      title: 'SAĞMAL MOBİL',
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
-          home: const MainPage(),
+          backgroundColor: Color.fromRGBO(35, 107, 157, 1),
+        ),
+      ),
+      
         );
       },
     );
   }
 }
+

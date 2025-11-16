@@ -155,11 +155,4 @@ static String phoneLabel = "Telefon Numarası";
 static String phoneValue = "+90 555 555 55 55";
 static String addressLabel = "Adres";
 static String addressValue = "Narince köyü ,Adıyaman ,Türkiye";
-
-
- 
- 
- 
-
-
 }

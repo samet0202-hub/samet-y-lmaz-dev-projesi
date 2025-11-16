@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sagmal_mobil/feature/financial_tracking/page/financial_tracking_page.dart';
 import 'package:sagmal_mobil/feature/home/page/home_page.dart';
+import 'package:sagmal_mobil/feature/login_register/page/login_register.dart';
 import 'package:sagmal_mobil/feature/milk_records/page/milk_records_page.dart';
 import 'package:sagmal_mobil/feature/profile/page/profil_page.dart';
 import 'package:sagmal_mobil/feature/payments/page/payments_page.dart';
@@ -18,7 +19,7 @@ class _MainPageState extends State<MainPage> {
 
   final List<Widget> _pages = [
    
-    const PaymentsPage(),
+    const LoginRegisterPage(),
     const MilkRecordsPage(),
     const HomePage(),
     const FinancialTrackingPage(),
